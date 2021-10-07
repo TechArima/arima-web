@@ -21,7 +21,7 @@ export default function IndexPage() {
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          <SEO title="Startup Landing 005" />
+          <SEO title="Arima - Tamperproof Documentation Management" />
           <Banner />
           <KeyFeature />
           <ServiceSection />
@@ -29,9 +29,6 @@ export default function IndexPage() {
           <CoreFeature />
           <WorkFlow />
           <Package />
-          <TeamSection />
-          <TestimonialCard />
-          <BlogSection />
           <Subscribe />
         </Layout>
       </StickyProvider>
