@@ -80,7 +80,7 @@ export default function Verifiable() {
             Verify your certificate
             </Heading>
             <Text as="p" sx={styles.description}>
-              Your are verifying from a trust source.
+              Your are verifying from a trustable solution.
             </Text>
             <form onSubmit={subscribe}>
               <Flex sx={styles.verifyForm}>

@@ -35,19 +35,19 @@ export default {
       label: 'Home',
     },
     {
-      path: 'https://digitalq.net/privacy.php',
+      path: 'https://techarima.com/privacy-policy/',
       label: 'Privacy Policy',
     },
     {
-      path: '/',
-      label: 'Supports',
+      path: 'https://developer.arima.io/',
+      label: 'Developer',
     },
     {
-      path: '/',
-      label: 'Marketing',
+      path: 'https://techarima.com/services/',
+      label: 'Services',
     },
     {
-      path: 'https://techarima.com/product-contact-us/',
+      path: 'https://techarima.com/reach-us/',
       label: 'Contact',
     },
   ],
