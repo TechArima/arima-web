@@ -10,7 +10,7 @@ export default {
       altText: 'Community',
       title: 'Join the Community',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+        'Get more update on blockchain technology.',
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ export default {
       altText: 'Chat',
       title: 'Chat Communication',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+        'You can reach us from the Gmail Chat Invite.',
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ export default {
       altText: 'Github',
       title: 'Github Access',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+        'Send us a request to work on our product.',
     },
   ],
   menuItem: [
@@ -35,8 +35,8 @@ export default {
       label: 'Home',
     },
     {
-      path: '/',
-      label: 'Adversite',
+      path: 'https://digitalq.net/privacy.php',
+      label: 'Privacy Policy',
     },
     {
       path: '/',
@@ -47,7 +47,7 @@ export default {
       label: 'Marketing',
     },
     {
-      path: '/',
+      path: 'https://techarima.com/product-contact-us/',
       label: 'Contact',
     },
   ],

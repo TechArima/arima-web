@@ -15,6 +15,7 @@ import TeamSection from '../sections/team-section';
 import TestimonialCard from '../sections/testimonial';
 import BlogSection from '../sections/blog-section';
 import Subscribe from '../sections/subscribe';
+import Verifiable from 'sections/verifiable';
 
 export default function IndexPage() {
   return (
@@ -24,7 +25,9 @@ export default function IndexPage() {
           <SEO title="Arima - Tamperproof Documentation Management" />
           <Banner />
           <KeyFeature />
-          <ServiceSection />
+         
+          <Verifiable />
+          <BlogSection />
           <Feature />
           <CoreFeature />
           <WorkFlow />

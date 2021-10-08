@@ -4,7 +4,7 @@ import fetch from 'isomorphic-unfetch';
 import { jsx } from 'theme-ui';
 import { Container, Flex, Box, Button, Input, Text, Heading } from 'theme-ui';
 
-export default function Subscribe() {
+export default function Verifiable() {
   // 1. Create a reference to the input so we can fetch/clear it's value.
   const inputEl = useRef(null);
   // 2. Hold a status in state to handle the response from our API.
@@ -72,27 +72,27 @@ export default function Subscribe() {
     handleSendGridResponse(res.status, text);
   };
   return (
-    <section>
+    <section id="verifiable">
       <Container>
         <Box sx={styles.contentBox}>
           <Box sx={styles.contentBoxInner}>
             <Heading as="h2" sx={styles.title}>
-              Subscribe to our Blog
+            Verify your certificate
             </Heading>
             <Text as="p" sx={styles.description}>
-                To Know more about our Product Updates. 
+              Your are verifying from a trust source.
             </Text>
             <form onSubmit={subscribe}>
-              <Flex sx={styles.subscribeForm}>
+              <Flex sx={styles.verifyForm}>
                 <label htmlFor="email" sx={{ variant: 'styles.srOnly' }}>
-                  Email Address
+                  Certificate Hash or Transaction Number
                 </label>
                 <Input
                   ref={inputEl}
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="Enter your email address"
+                  placeholder="Certificate Hash or Transaction Number"
                 />
 
                 <div>
@@ -111,7 +111,7 @@ export default function Subscribe() {
                 >
                   {!status.submitting
                     ? !status.submitted
-                      ? 'Subscribe'
+                      ? 'Verify'
                       : 'Submitted'
                     : 'Submitting...'}
                 </Button>
@@ -151,7 +151,7 @@ const styles = {
     lineHeight: [1.85, null, null, 2],
     px: [0, null, 5],
   },
-  subscribeForm: {
+  verifyForm: {
     mt: [6, null, null, 7],
     backgroundColor: ['transparent', 'white'],
     borderRadius: [0, 50],

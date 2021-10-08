@@ -10,27 +10,27 @@ import ArrowEven from 'assets/arrowEven.svg';
 const data = [
   {
     id: 1,
-    title: 'Set disbursement Instructions',
+    title: 'Register to our portal',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Get access to our portal and automate your certificate issuing process.',
   },
   {
     id: 2,
-    title: 'Assembly retrieves funds from your account',
+    title: 'Select a template or Upload your own certificate',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Get your our customzied templates for your certificate or Build your own and Upload it.',
   },
   {
     id: 3,
-    title: 'Assembly initiates disbursement',
+    title: 'Issue the Certificate or Documents',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Issue a certificate seemless and share it with larger audience.',
   },
   {
     id: 4,
-    title: 'Customer receives funds payment',
+    title: 'Verify the Certificate or Document',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Get verified your issued certficate or documents hassle free.',
   },
 ];
 

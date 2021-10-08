@@ -32,13 +32,13 @@ const packages = {
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: 'Blog Support Tools',
+          text: 'Verifiable Qr-code',
           isAvailable: true,
         },
         {
           id: 4,
           icon: <IoIosCloseCircle />,
-          text: 'eCommerce Store ',
+          text: 'Verification via Certifaction website',
           isAvailable: true,
         },
       ],

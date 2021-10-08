@@ -12,34 +12,34 @@ const data = [
   {
     id: 1,
     imgSrc: Performance,
-    altText: 'Fast Performance',
-    title: 'Fast Performance',
+    altText: 'Issue the Certificate in a minute',
+    title: 'Issue the Certificaet in a minute',
     text:
-      'Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.',
+      'customize your certificate and issue with your logo in a minute.',
   },
   {
     id: 2,
     imgSrc: Partnership,
-    altText: 'Pro Subscription',
-    title: 'Pro Subscription',
+    altText: 'White Labelling',
+    title: 'White Labelling',
     text:
-      'We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.',
+      'You can completely whitelable this product with your own organization and with your own verification dashboard.',
   },
   {
     id: 3,
     imgSrc: Subscription,
-    altText: 'Partnership deal',
-    title: 'Partnership deal',
+    altText: 'Verifiable in Blockchain',
+    title: 'Verifiable in Blockchain',
     text:
-      'Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.',
+      'Verify your certificate or document with IPFS and Blockchain.',
   },
   {
     id: 4,
     imgSrc: Support,
-    altText: 'Customer Support',
-    title: 'Customer Support',
+    altText: 'Provides Unlimited Certficiate',
+    title: 'Provides Unlimted Certfication',
     text:
-      'We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.',
+      'You can issue unlimited certificate by using our arima.io gateway.',
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Feature() {
       <Container>
         <SectionHeader
           slogan="Quality features"
-          title="Amazing useful features"
+          title="Customer Benefits"
         />
 
         <Grid sx={styles.grid}>

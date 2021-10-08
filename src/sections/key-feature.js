@@ -15,7 +15,7 @@ const data = [
     altText: 'Fast Performance',
     title: 'Fast Performance',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Generate a Certificate and store it in Blockchain easily and quickly.',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const data = [
     altText: 'Partnership deal',
     title: 'Partnership deal',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Get all your certificate with free of cost by parterning with us.',
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const data = [
     altText: 'Pro Subscription',
     title: 'Pro Subscription',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Marking your presence in virtual world.',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const data = [
     altText: 'Customer Support',
     title: 'Customer Support',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Get our support to promote and brand your presence.',
   },
 ];
 

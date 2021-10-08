@@ -14,11 +14,9 @@ export default function Banner() {
             Real or Fake ?
           </Heading>
           <Text as="p" variant="heroSecondary">
-          Tamperproof Credentials Make It Easy Verifiable
+          Tamperproof Credentials Make It Easy Verifiable using Green Blockchain.
           
-          How do we know whether a document is tampered or not ?
-            
-.
+        
           </Text>
           <Button variant="primary">Explore</Button>
         </Box>
@@ -45,7 +43,7 @@ const styles = {
       height: '100%',
       width: '100%',
       zIndex: -1,
-      backgroundImage: `url(${ShapeLeft})`,
+      //backgroundImage: `url(${ShapeLeft})`,
       backgroundRepeat: `no-repeat`,
       backgroundPosition: 'bottom left',
       backgroundSize: '36%',
@@ -58,7 +56,7 @@ const styles = {
       height: '100%',
       width: '100%',
       zIndex: -1,
-      backgroundImage: `url(${ShapeRight})`,
+      //backgroundImage: `url(${ShapeRight})`,
       backgroundRepeat: `no-repeat`,
       backgroundPosition: 'bottom right',
       backgroundSize: '32%',

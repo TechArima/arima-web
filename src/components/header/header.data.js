@@ -12,7 +12,7 @@ export default [
     label: 'Pricing',
   },
   {
-    path: 'testimonial',
-    label: 'Testimonial',
+    path: 'verifiable',
+    label: 'Verifiable',
   },
 ];

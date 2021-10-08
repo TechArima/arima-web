@@ -69,8 +69,8 @@ const styles = {
     justifyContent: 'space-between',
     alignItem: 'center',
     name: {
-      fontSize: ['14px', null, 2],
-      fontWeight: 500,
+      fontSize: ['20px', null, 2],
+      fontWeight: 400,
       color: 'primary',
       lineHeight: 1.4,
     },
