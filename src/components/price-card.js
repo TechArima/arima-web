@@ -1,4 +1,4 @@
-import { Box, Card, Text, Heading, Button } from 'theme-ui';
+import { Box, Card, Text, Heading, Link, Button } from 'theme-ui';
 import React from 'react';
 import List from './list';
 
@@ -32,9 +32,9 @@ export default function PriceCard({
           <span>/Monthly</span>
         </Text>
         <Box sx={styles.buttonGroup}>
-          <Button variant="primary" aria-label={buttonText}>
+         <Link href="https://techarima.com/app"> <Button variant="primary" aria-label={buttonText}>
             {buttonText}
-          </Button>
+          </Button></Link>
           {anotherOption && (
             <Button
               variant="textButton"

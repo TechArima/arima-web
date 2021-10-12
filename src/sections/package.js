@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Box, Flex } from 'theme-ui';
+import { jsx, Container, Box, Link, Flex } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 
 import React, { useState } from 'react';
@@ -39,7 +39,7 @@ const packages = {
         },
         {
           id: 4,
-          icon: <IoIosCloseCircle />,
+          icon: <IoIosCheckmarkCircle />,
           text: 'Verification via Certifaction website',
           isAvailable: true,
         },
