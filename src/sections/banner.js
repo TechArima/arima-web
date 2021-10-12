@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
+import { Container, Box, Heading, Text, Image, Link, Button } from 'theme-ui';
 import BannerImg from 'assets/screen.png';
 import ShapeLeft from 'assets/shape-left.png';
 import ShapeRight from 'assets/shape-right.png';
@@ -18,7 +18,8 @@ export default function Banner() {
           
         
           </Text>
-          <Button variant="primary">Explore</Button>
+          <Link href="https://app.arima.io">
+          <Button variant="primary">Explore</Button></Link>
         </Box>
 
         <Box sx={styles.banner.imageBox}>

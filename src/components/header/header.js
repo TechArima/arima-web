@@ -30,14 +30,14 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex>
-
+<Link href="https://techarima.com/app">
           <Button
             className="donate__btn"
             variant="secondary"
             aria-label="Get Started"
           >
             Get Early Access
-          </Button>
+          </Button></Link>
 
           <MobileDrawer />
         </Container>
