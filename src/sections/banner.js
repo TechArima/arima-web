@@ -18,7 +18,7 @@ export default function Banner() {
           
         
           </Text>
-          <Link href="https://app.arima.io">
+          <Link href="https://techarima.com/app">
           <Button variant="primary">Explore</Button></Link>
         </Box>
 
