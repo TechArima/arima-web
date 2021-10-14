@@ -1,189 +1,76 @@
 /** @jsx jsx */
-import { useRef, useState } from 'react';
-import fetch from 'isomorphic-unfetch';
-import { jsx } from 'theme-ui';
-import { Container, Flex, Box, Button, Input, Text, Heading } from 'theme-ui';
+import { jsx, Container, Box } from 'theme-ui';
+import TextFeature from 'components/text-feature';
+import Image from 'components/image';
+
+import FeatureThumb from 'assets/verify.svg';
+import shapePattern from 'assets/shape-pattern2.png';
+
+const data = {
+  subTitle: '',
+  title: 'Verify Your Certificate',
+  description:
+    '',
+  btnName: 'Get Verified',
+  btnURL: 'https://tacrm.talentegra.com/verify/verify_certificate',
+};
 
 export default function Verifiable() {
-  // 1. Create a reference to the input so we can fetch/clear it's value.
-  const inputEl = useRef(null);
-  // 2. Hold a status in state to handle the response from our API.
-  const [status, setStatus] = useState({
-    submitted: false,
-    submitting: false,
-    info: { error: false, msg: null },
-  });
-  const handleMailChimpResponse = (errorMsg, successMsg) => {
-    if (errorMsg) {
-      // 4. If there was an error, update the message in state.
-      setStatus({
-        info: { error: true, msg: errorMsg },
-      });
-
-      return;
-    }
-
-    // 5. Clear the input value and show a success message.
-    setStatus({
-      submitted: true,
-      submitting: false,
-      info: { error: false, msg: successMsg },
-    });
-    inputEl.current.value = '';
-  };
-
-  const handleSendGridResponse = (status, msg) => {
-    if (status === 200) {
-      // 5. Clear the input value and show a success message.
-      setStatus({
-        submitted: true,
-        submitting: false,
-        info: { error: false, msg: msg },
-      });
-      inputEl.current.value = '';
-    } else {
-      setStatus({
-        info: { error: true, msg: msg },
-      });
-    }
-  };
-  const subscribe = async (e) => {
-    e.preventDefault();
-    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-
-    // 3. Send a request to our API with the user's email address.
-    const res = await fetch('/api/subscribe', {
-      body: JSON.stringify({
-        email: inputEl.current.value,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    });
-    //for mailChimp integration
-    const { error } = await res.json();
-    handleMailChimpResponse(
-      error,
-      'Success! 🎉 You are now subscribed to the newsletter.'
-    );
-    // For sendGrid integration
-    const text = await res.text();
-    handleSendGridResponse(res.status, text);
-  };
   return (
-    <section id="verifiable">
-      <Container>
+    <section sx={{ variant: 'section.coreFeature' }} id="verifiable">
+      <Container sx={styles.containerBox}>
         <Box sx={styles.contentBox}>
-          <Box sx={styles.contentBoxInner}>
-            <Heading as="h2" sx={styles.title}>
-            Verify your certificate
-            </Heading>
-            <Text as="p" sx={styles.description}>
-              Your are verifying from a trustable solution.
-            </Text>
-            <form onSubmit={subscribe}>
-              <Flex sx={styles.verifyForm}>
-                <label htmlFor="email" sx={{ variant: 'styles.srOnly' }}>
-                  Certificate Hash or Transaction Number
-                </label>
-                <Input
-                  ref={inputEl}
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Certificate Hash or Transaction Number"
-                />
-
-                <div>
-                  {status.info.error && (
-                    <div className="error">Error: {status.info.msg}</div>
-                  )}
-                  {!status.info.error && status.info.msg && (
-                    <div className="success">{status.info.msg}</div>
-                  )}
-                </div>
-                <Button
-                  type="submit"
-                  disabled={status.submitting}
-                  className="subscribe__btn"
-                  aria-label="Subscribe"
-                >
-                  {!status.submitting
-                    ? !status.submitted
-                      ? 'Verify'
-                      : 'Submitted'
-                    : 'Submitting...'}
-                </Button>
-              </Flex>
-            </form>
-          </Box>
+          <TextFeature
+            subTitle={data.subTitle}
+            title={data.title}
+            description={data.description}
+            btnName={data.btnName}
+            btnURL={data.btnURL}
+          />
         </Box>
+        <Box sx={styles.thumbnail}>
+          <Image src={FeatureThumb} alt="Thumbnail" />
+           </Box>
       </Container>
     </section>
   );
 }
 
 const styles = {
+  containerBox: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexWrap: ['wrap', null, null, 'nowrap'],
+    pb: [0, 7, 0, null, 7],
+  },
   contentBox: {
-    backgroundColor: 'primary',
-    textAlign: 'center',
-    borderRadius: 10,
-    py: ['60px', null, 8],
-  },
-  contentBoxInner: {
-    width: ['100%', null, '540px', '600px'],
-    mx: 'auto',
-    mt: -1,
-    px: [3, 5],
-  },
-  title: {
-    fontSize: ['24px', null, '28px', null, null, '32px', null, '36px'],
-    color: 'white',
-    lineHeight: [1.3, null, null, 1.25],
-    fontWeight: '700',
-    letterSpacing: ['-.5px', null, '-1.5px'],
-    mb: [2, 3],
-  },
-  description: {
-    fontSize: ['15px', 2, null, null, null, '17px', null, 3],
-    color: 'white',
-    lineHeight: [1.85, null, null, 2],
-    px: [0, null, 5],
-  },
-  verifyForm: {
-    mt: [6, null, null, 7],
-    backgroundColor: ['transparent', 'white'],
-    borderRadius: [0, 50],
-    overflow: 'hidden',
-    p: [0, 1],
-    flexDirection: ['column', 'row'],
-    '[type="email"]': {
-      border: 0,
-      borderRadius: 50,
-      fontFamily: 'body',
-      fontSize: ['14px', null, 2],
-      fontWeight: 500,
-      color: 'heading',
-      py: 1,
-      px: [4, null, 6],
-      backgroundColor: ['white', 'transparent'],
-      height: ['52px', null, '60px'],
-      textAlign: ['center', 'left'],
-      '&:focus': {
-        boxShadow: '0 0 0 0px',
-      },
-      '::placeholder': {
-        color: 'primary',
-        opacity: 1,
-      },
+    flexShrink: 0,
+    px: [0, null, '30px', 0],
+    textAlign: ['center', null, null, 'left'],
+    width: ['100%', '80%', null, 340, 400, 430, null, 485],
+    pb: ['50px', '60px', null, 0],
+    mx: ['auto', null, null, 0],
+    '.description': {
+      pr: [0, null, 6, 7, 6],
     },
-    '.subscribe__btn': {
-      flexShrink: 0,
-      ml: [0, 2],
-      backgroundColor: ['text', 'primary'],
-      mt: [2, 0],
-      py: ['15px'],
+  },
+  thumbnail: {
+    display: 'inline-flex',
+    position: 'relative',
+    mr: 'auto',
+    ml: ['auto', null, null, null, 7],
+    '> img': {
+      position: 'relative',
+      zIndex: 1,
+      height: [310, 'auto'],
     },
+  },
+  shapeBox: {
+    position: 'absolute',
+    bottom: -65,
+    right: -165,
+    zIndex: -1,
+    display: ['none', 'inline-block', 'none', null, 'inline-block'],
   },
 };
