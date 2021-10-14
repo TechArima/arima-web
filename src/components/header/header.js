@@ -1,9 +1,10 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Button } from 'theme-ui';
+import { jsx, Container, Flex, Button, Link as TLink} from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import { Link } from 'react-scroll';
 import Logo from 'components/logo';
-import LogoDark from 'assets/talogo1.png';
+/** import LogoDark from 'assets/talogo1.png'; */
+import LogoName from 'assets/logoname-4.png';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
@@ -13,7 +14,8 @@ export default function Header({ className }) {
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
         <Container sx={styles.container}>
-          <Logo src={LogoDark} />
+          
+          <Logo src={LogoName} />
 
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
@@ -30,16 +32,14 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex>
-          <Link 
-          to="https://techarima.com/app" spy={true} smooth={true} offset={50} duration={50}>
+          <TLink 
+          href="https://techarima.com/app" spy={true} smooth={true} offset={50} duration={50}>
           <Button
             className="donate__btn"
             variant="secondary"
-            aria-label="Get Started"
-            
-          >
-         Get Early Access
-          </Button></Link>
+            aria-label="Get Started">
+         <a>Get Early Access</a>
+          </Button></TLink>
 
           <MobileDrawer />
         </Container>
