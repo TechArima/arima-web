@@ -12,7 +12,7 @@ const data = {
   description:
     '',
   btnName: 'Get Verified',
-  btnURL: 'https://tacrm.talentegra.com/verify/verify_certificate',
+  btnURL: 'https://app.arima.io/verify/verify_certificate',
 };
 
 export default function Verifiable() {
