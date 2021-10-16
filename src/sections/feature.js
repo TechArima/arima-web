@@ -13,7 +13,7 @@ const data = [
     id: 1,
     imgSrc: Performance,
     altText: 'Issue the Certificate in a minute',
-    title: 'Issue the Certificaet in a minute',
+    title: 'Issue the Certificate in a minute',
     text:
       'customize your certificate and issue with your logo in a minute.',
   },
@@ -36,8 +36,8 @@ const data = [
   {
     id: 4,
     imgSrc: Support,
-    altText: 'Provides Unlimited Certficiate',
-    title: 'Provides Unlimted Certfication',
+    altText: 'Provides Unlimited Certificiate',
+    title: 'Provides Unlimted Certification',
     text:
       'You can issue unlimited certificate by using our arima.io gateway.',
   },
