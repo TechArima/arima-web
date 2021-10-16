@@ -13,7 +13,7 @@ export default [
   },
   {
     path: 'verifiable',
-    label: 'Verifiable',
+    label: 'Verify Certificate',
   },
   
   

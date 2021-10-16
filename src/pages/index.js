@@ -23,6 +23,7 @@ export default function IndexPage() {
       <StickyProvider>
         <Layout>
           <SEO title="Arima - Tamperproof Documentation Management" />
+          
           <Banner />
           <KeyFeature />
          

@@ -16,10 +16,12 @@ export default function Banner() {
           <Text as="p" variant="heroSecondary">
           Tamperproof Credentials Make It Easy Verifiable using Green Blockchain.
           
-        
+    
           </Text>
-          <Link href="https://techarima.com/app">
-          <Button variant="primary">Explore</Button></Link>
+
+          <Link href="https://app.arima.io/verify/verify_certificate">
+          <Button variant="primary">Verify Certificate</Button></Link>
+        
         </Box>
 
         <Box sx={styles.banner.imageBox}>
