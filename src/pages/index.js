@@ -26,7 +26,6 @@ export default function IndexPage() {
           
           <Banner />
           <KeyFeature />
-         
           <Verifiable />
           <BlogSection />
           <Feature />

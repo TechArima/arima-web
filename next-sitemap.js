@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://startup-agency-modern.vercel.app',
+  siteUrl: 'https://arima.io',
   generateRobotsTxt: true,
   // optional
   // robotsTxtOptions: {
