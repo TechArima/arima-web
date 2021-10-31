@@ -11,7 +11,7 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-            Digital Credentials in Blockchain
+            Secure Trust Traceable
           </Heading>
           <Text as="p" variant="heroSecondary">
           Tamperproof Certificate Make It Easy Verifiable using Green Blockchain.
