@@ -11,10 +11,10 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-            First Digital Credential Platform in Blokchain
+            Digital Credentials in Blockchain
           </Heading>
           <Text as="p" variant="heroSecondary">
-          Tamperproof Credentials Make It Easy Verifiable using Green Blockchain.
+          Tamperproof Certificate Make It Easy Verifiable using Green Blockchain.
           
     
           </Text>
