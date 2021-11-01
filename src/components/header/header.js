@@ -38,7 +38,7 @@ export default function Header({ className }) {
             className="donate__btn"
             variant="secondary"
             aria-label="Get Started">
-         <a>Get Early Access</a>
+         <a>App Login</a>
           </Button></TLink>
 
           <MobileDrawer />

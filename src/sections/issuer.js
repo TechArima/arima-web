@@ -4,23 +4,23 @@ import TextFeature from 'components/text-feature';
 import Image from 'components/image';
 
 //import FeatureThumb from 'assets/verify.svg';
-import FeatureThumb from 'assets/blog/verifiable.gif';
+import FeatureThumb from 'assets/blog/issue_certs.gif';
 import shapePattern from 'assets/shape-pattern2.png';
 
 const data = {
   subTitle: '',
-  title: 'Verify Your Certificate',
+  title: 'Issue Certificate',
   description:
     '',
-  btnName: 'Get Verified',
-  btnURL: 'https://app.arima.io/verify/verify_certificate',
+  btnName: 'Issue Certificate',
+  btnURL: 'https://app.arima.io/',
 };
 
-export default function Verifiable() {
+export default function IssueCerts() {
   return (
-    <section sx={{ variant: 'section.coreFeature' }} id="verifiable">
+    <section sx={{ variant: 'section.coreFeature' }} id="issuecerts">
       <Container sx={styles.containerBox}>
-        
+      
         <Box sx={styles.contentBox}>
           <TextFeature
             subTitle={data.subTitle}
@@ -33,6 +33,7 @@ export default function Verifiable() {
         <Box sx={styles.thumbnail}>
           <Image src={FeatureThumb} alt="Thumbnail" />
            </Box>
+ 
       </Container>
     </section>
   );

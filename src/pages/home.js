@@ -16,22 +16,19 @@ import TestimonialCard from '../sections/testimonial';
 import BlogSection from '../sections/blog-section';
 import Subscribe from '../sections/subscribe';
 import Verifiable from 'sections/verifiable';
-import IssueCerts from 'sections/issuer';
 
-export default function IndexPage() {
+export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          <SEO title="Arima - Tamperproof Documentation Management" />
+          <SEO title="TechArima - Home" />
           
           <Banner />
           <KeyFeature />
-          <IssueCerts />
-          <BlogSection />
           <Verifiable />
+          <BlogSection />
           <Feature />
-         
           <CoreFeature />
           <WorkFlow />
           <Package />
